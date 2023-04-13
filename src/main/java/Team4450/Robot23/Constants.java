@@ -178,7 +178,7 @@ public final class Constants
 
   //-------------------- No student code above this line ------------------------------------------------------
 
-  public static final AprilTagFieldLayout APRILTAGFIELDLAYOUT = new AprilTagFieldLayout(Arrays.asList(
+    public static final AprilTagFieldLayout APRILTAGFIELDLAYOUT = new AprilTagFieldLayout(Arrays.asList(
     new AprilTag(1, new Pose3d(Units.inchesToMeters(610.77), Units.inchesToMeters( 42.19), Units.inchesToMeters(18.22), new Rotation3d(0.0, 0.0, Math.PI))),
     new AprilTag(2, new Pose3d(Units.inchesToMeters(610.77), Units.inchesToMeters(108.19), Units.inchesToMeters(18.22), new Rotation3d(0.0, 0.0, Math.PI))),
     new AprilTag(3, new Pose3d(Units.inchesToMeters(610.77), Units.inchesToMeters(174.19), Units.inchesToMeters(18.22), new Rotation3d(0.0, 0.0, Math.PI))),
@@ -187,26 +187,34 @@ public final class Constants
     new AprilTag(6, new Pose3d(Units.inchesToMeters( 40.45), Units.inchesToMeters(174.19), Units.inchesToMeters(18.22), new Rotation3d(0.0, 0.0, 0.0))),
     new AprilTag(7, new Pose3d(Units.inchesToMeters( 40.45), Units.inchesToMeters(108.19), Units.inchesToMeters(18.22), new Rotation3d(0.0, 0.0, 0.0))),
     new AprilTag(8, new Pose3d(Units.inchesToMeters( 40.45), Units.inchesToMeters( 42.19), Units.inchesToMeters(18.22), new Rotation3d(0.0, 0.0, 0.0)))
-  ), Units.inchesToMeters(651.25), Units.inchesToMeters(315.5));
+    ), Units.inchesToMeters(651.25), Units.inchesToMeters(315.5));
 
-  public enum ScoreMode{
+    public enum ScoreMode{
     CONE,
     CUBE
-  }
+    }
 
-  public static final Transform3d ROBOTTOCAMERA = new Transform3d();
+    public static final Transform3d ROBOTTOCAMERA = new Transform3d();
 
-  public static final Translation3d LIMETOCENTER = new Translation3d();
-  
-  public static ScoreMode scoreMode;
+    public static final Translation3d LIMETOCENTER = new Translation3d();
 
-  public enum Preset{
-    NONE,
-    GRABBING,
-    POLEHIGH,
-    POLELOW,
-    TAGHIGH,
-    TAGLOW
-}
+    public static ScoreMode scoreMode;
+
+    public enum Preset{
+        NONE,
+        GRABBING,
+        POLEHIGH,
+        POLELOW,
+        TAGHIGH,
+        TAGLOW
+    }
+
+    public enum IntakeAction{
+        POWER,
+        TICKS,
+        CONEIN,
+        CUBEIN
+    }
+
 
 }
